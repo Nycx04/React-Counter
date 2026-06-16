@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "App.css";
+import "./App.css"
 
 function App() {
   const [count, setter] = useState(0); //increment by 5
@@ -7,18 +7,17 @@ function App() {
     setter(count + 5);
   }
   function subtraction() {
-    setter(count - 5);
+    setter(Math.max(0,count - 5));
   }
   function increment() {
-    setter(count + 1);
+    setter (count + 1);
   }
-
   return (
-    <div>
+    <div id="tan">
       <div id="box" align="center">
         <h1 id="count">{count}</h1>
       </div>
-      <div align="center">
+      <div align="center" id="kevs">
         <button id="jump5" onClick={addition}>
           Click to increment by 5
         </button>
